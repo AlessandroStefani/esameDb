@@ -1,0 +1,89 @@
+-- ***************************
+-- * Standard SQL generation *
+-- ***************************
+
+
+-- Database Section
+-- ________________
+
+create database COMPLETO;
+
+
+-- TableSpace Section
+-- __________________
+
+-- Table Section
+-- _____________
+
+create table AEROPORTO (
+	codice aeroporto char(1) not null,
+	nome char(1) not null,
+	località char(1) not null,
+	primary key (codice aeroporto));
+
+create table ASSISTENTE DI VOLO (
+	id assistente char(1) not null,
+	primary key (id assistente));
+
+create table BIGLIETTO (
+	codice biglietto char(1) not null,
+	prezzo char(1) not null,
+	unique (, codice biglietto),
+	unique (, codice biglietto),
+	primary key (codice biglietto));
+
+create table CONTROLLO (
+	codice controllo char(1) not null,
+	specifiche char(1) not null,
+	durata char(1) not null,
+	data inizio char(1) not null,
+	data fine char(1) not null,
+	note char(1),
+	primary key (, codice controllo));
+
+create table PASSEGGERO (
+);
+
+create table PERSONA (
+	nome char(1) not null,
+	cognome char(1) not null,
+	data di nascita char(1) not null,
+	codice fiscale char(1) not null,
+	telefono char(1) not null,
+	primary key (codice fiscale));
+
+create table PERSONALE (
+	data assunzione char(1) not null,
+	stato char(1) not null);
+
+create table PILOTA (
+	id pilota char(1) not null,
+	ore di volo char(1) not null,
+	primary key (id pilota));
+
+create table VELIVOLO (
+	id velivolo char(1) not null,
+	modello char(1) not null,
+	posti char(1) not null,
+	ore di volo char(1) not null,
+	età char(1) not null,
+	data acquisizione char(1) not null,
+	stato char(1) not null,
+	primary key (id velivolo));
+
+create table VOLO (
+	codice volo char(1) not null,
+	durata char(1) not null,
+	data char(1) not null,
+	ora char(1) not null,
+	primary key (codice volo),
+	unique (, data, ora));
+
+
+-- Constraints Section
+-- ___________________
+
+
+-- Index Section
+-- _____________
+
