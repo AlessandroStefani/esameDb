@@ -12,8 +12,8 @@
 -- Database Section
 -- ________________ 
 
-create database ProgDB;
-use ProgDB;
+create database progDB;
+use progDB;
 
 
 -- Tables Section
@@ -26,8 +26,8 @@ create table AEROPORTO (
      constraint ID_AEROPORTO_ID primary key (codiceAeroporto));
 
 create table BIGLIETTO (
-     codiceBiglietto varchar(255) not null,
-     codiceVolo varchar(255) not null,
+     codiceBiglietto int not null AUTO_INCREMENT,
+     codiceVolo int not null,
      codiceFiscale varchar(255) not null,
      prezzo varchar(255) not null,
      constraint ID_BIGLIETTO_ID primary key (codiceBiglietto),
@@ -53,7 +53,7 @@ create table CONTROLLO (
      constraint ID_CONTROLLO_ID primary key (idVelivolo, codiceControllo));
 
 create table effettua (
-     codiceVolo varchar(255) not null,
+     codiceVolo int not null,
      codicePersonale varchar(255) not null,
      constraint ID_effettua_ID primary key (codicePersonale, codiceVolo));
 
@@ -80,7 +80,7 @@ create table RIPOSO (
 
 create table scalo (
      codiceAeroporto varchar(255) not null,
-     codiceVolo varchar(255) not null,
+     codiceVolo int not null,
      constraint ID_scalo_ID primary key (codiceAeroporto, codiceVolo));
 
 create table VELIVOLO (
@@ -94,7 +94,7 @@ create table VELIVOLO (
      constraint ID_VELIVOLO_ID primary key (idVelivolo));
 
 create table VOLO (
-     codiceVolo varchar(255) not null,
+     codiceVolo int not null AUTO_INCREMENT,
      durata varchar(255) not null,
      data DATE not null,
      ora TIME not null,
