@@ -22,6 +22,7 @@ foreach ($templateParams["personale"] as $membro) {
             $dataUpdate = new DateTime("now");
             if (($dataPartenza < $dataUpdate) && ($dataUpdate < $dataArrivo)) {
                 $voloTerminato = false;
+                break;
             }
         }
         if ($voloTerminato) {

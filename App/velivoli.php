@@ -25,6 +25,7 @@ foreach ($all as $v) {
             $dataUpdate = new DateTime("now");
             if (($dataPartenza < $dataUpdate) && ($dataUpdate < $dataArrivo)) {
                 $voloTerminato = false;
+                break;
             }
         }
         if ($voloTerminato) {
