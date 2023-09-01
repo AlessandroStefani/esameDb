@@ -17,11 +17,11 @@ foreach ($templateParams["voli"] as $volo) {
     $dataPartenza = new DateTime($volo["data"].$volo["ora"]);
     $durataOre = explode(":",$volo["durata"])[0];
     $durataMinuti = explode(":",$volo["durata"])[1];
-    $dataArrivo = date_add($dataPartenza, date_interval_create_from_date_string($durataOre."hours".$durataMinuti."minutes"));
+    $dataArrivo = date_add(new DateTime($volo["data"].$volo["ora"]), date_interval_create_from_date_string($durataOre."hours".$durataMinuti."minutes"));
     $dataUpdate = new DateTime("now");
-    if ($dataPartenza > $dataUpdate && $dataPartenza < $dataArrivo) {
+    if(($dataPartenza < $dataUpdate) && ($dataUpdate < $dataArrivo)) {
         $dbh->updateStatoVelivolo($volo["idVelivolo"], "volo");
-        $dbh->updateStatoPersonale($volo["codiceVolo"], "volo");
+        $dbh->updateStatoPersonaleVolo($volo["codiceVolo"], "volo");
     }
 }
 

@@ -19,4 +19,15 @@ INSERT INTO `velivolo` (`idVelivolo`, `modello`, `posti`, `oreDiVolo`, `eta`, `d
 
 INSERT INTO `aeroporto` (`codiceAeroporto`, `nome`, `localita`) VALUES ('LIMC', 'Milano-Malpensa', 'Italia'), ('EGLL', 'Londra-Heathrow', 'Regno Unito'), ('UUEE', 'Mosca-Šeremet\'evo', 'Russia'), ('EDDB', 'Berlino-Brandeburgo', 'Germania'), ('OMDB', 'Aeroporto Internazionale di Dubai', 'Emirati Arabi Uniti'), ('KJFK', 'John F. Kennedy', 'Stati Uniti'), ('ZBAD', 'Pechino-Daxing', 'Cina'), ('LGAV', 'Atene-Eleftherios Venizelos', 'Grecia'), ('YSSY', 'Kingsford Smith', 'Australia'), ('HECA', 'Aeroporto Internazionale del Cairo', 'Egitto'), ('VIDP', 'Aeroporto Internazionale di Delhi-Indira Gandhi', 'India');
 
-
+INSERT INTO `controllo` (`idVelivolo`, `codiceControllo`, `specifiche`, `durata`, `dataInizio`, `dataFine`, `note`) VALUES 
+('1', 'D1', 'Tipo D', '42days', '2022-08-01', '2022-09-12', ''),
+('2', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('3', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('4', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('5', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('6', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('7', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('8', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('9', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('10', 'D1', 'Tipo D', '42days', '2022-09-01', '2022-10-13', ''),
+('1', 'A1', 'Tipo A', '1day', '2023-03-01', '2023-03-02', 'Tail Strike');
